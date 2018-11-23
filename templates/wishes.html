@@ -1,0 +1,54 @@
+<html>
+<head>
+<style>
+body {
+    background: lightblue  no-repeat fixed center;
+}
+</style>
+</head>
+<body>
+<form action="/enter/" method="post">
+    {% csrf_token %}
+    <table align="center" border="2">
+           <tr>
+        <td>
+            <input type="text" placeholder="Name" required name="t1">
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <input type="text" placeholder="Relation" required name="t2">
+        </td>
+    </tr>
+
+    <tr>
+        <td>Say Wishes To Them
+            <textarea name="t3"></textarea>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="submit" value="Save">
+        </td>
+    </tr>
+     <tr>
+         <td>{{ msg }}</td>
+     </tr>
+
+    </table>
+    </form>
+<form action="/logout/" method="post">
+    {% csrf_token %}
+<table align="center" border="0">
+    <tr>
+        <td>
+            <input type="submit" value="Logout">
+        </td>
+    </tr>
+    </table>
+    </form>
+{% load staticfiles %}
+<img src="{% static 'tumblr_mkj2ojUxov1s4pl3no1_1280-635x952.jpg' %}" width="1350" height="450">
+</body>
+</html>

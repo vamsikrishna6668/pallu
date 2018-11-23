@@ -1,0 +1,46 @@
+<!-- program 7 bootstrap create a webpage to apply image classes dynamically-->
+<html>
+<head>
+<!--import section-->
+<link href="bootstrap.min.css" rel="stylesheet"/>
+<script src="jquery.min.js"></script>
+<script src="popper.min.js"></script>
+<script src="bootstrap.min.js"></script>
+<style>
+img
+{
+width:120px;
+height:120px;
+margin:5px;
+}
+</style>
+</head>
+<body>
+<h3>Developing webpages using Bootstrap</h3>
+<hr/>
+select class:
+<select id="s1">
+<option>rounded</option>
+<option>rounded-circle</option>
+<option>img-thumbnail</option>
+</select>
+<br><br>
+<div class="conatiner">
+<img src="Images\image1.jpg"/>
+<img src="Images\image2.jpg"/>
+<img src="Images\image3.jpg"/>
+<img src="Images\image4.jpg"/>
+<img src="Images\image5.jpg"/>
+<img src="Images\image6.jpg"/>
+</div>
+<script>
+$("img").addClass("rounded");
+$("#s1").change(function()
+{
+var str=$("#s1").val();
+$("img").removeClass();
+$("img").addClass(str);
+});
+</script>
+</body>
+</html>
